@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Passit extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'type',
+        'price',
+        'unitCost',
+        'iva'
+    ];
 }
