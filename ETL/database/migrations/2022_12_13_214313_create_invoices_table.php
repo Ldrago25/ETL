@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->float('amountPassits');
             $table->integer('haveSouce');
             $table->timestamps();
         });

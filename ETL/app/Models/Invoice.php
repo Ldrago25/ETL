@@ -10,7 +10,6 @@ class Invoice extends Model
     use HasFactory;
     protected $fillable = [
         'date',
-        'amountPassits',
         'haveSouce',
     ];
         

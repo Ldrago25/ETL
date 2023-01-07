@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('agency_id');
             $table->unsignedBigInteger('invoice_id');
             $table->unsignedBigInteger('passit_id');
+            $table->float('amountPassits');
             $table->float('priceTotal');
             $table->timestamps();
             $table->foreign('client_id')->references('id')->on('clients');

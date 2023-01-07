@@ -63,7 +63,6 @@ class DetailInvoiceImport implements ToModel
             DB::commit();
             $invoice=Invoice::create([
                 'date'=>date("Y-m-d", strtotime($row[10])),
-                'amountPassits'=>$row[5],
                 'haveSouce'=>$row[8],
             ]);
             $invoice->save();
@@ -75,6 +74,7 @@ class DetailInvoiceImport implements ToModel
                     'agency_id'=>$agency->id,
                     'invoice_id'=>$invoice->id,
                     'passit_id'=>$passit->id,
+                    'amountPassits'=>$row[5],
                     'priceTotal'=>$row[9]
             ]);
 

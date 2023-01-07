@@ -14,6 +14,7 @@ class DetailInvoice extends Model
         'agency_id',
         'invoice_id',
         'passit_id',
+        'amountPassits',
         'priceTotal'
     ];
     public function agency()
