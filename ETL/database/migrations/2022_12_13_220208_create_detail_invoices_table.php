@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('client_id')->references('id')->on('clients');
             $table->foreign('agency_id')->references('id')->on('agencies');
-            $table->foreign('invoice_id')->references('id')->on('agencies');
+            $table->foreign('invoice_id')->references('id')->on('invoices');
             $table->foreign('passit_id')->references('id')->on('passits');
         });
     }

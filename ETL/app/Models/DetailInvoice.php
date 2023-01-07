@@ -18,7 +18,7 @@ class DetailInvoice extends Model
     ];
     public function agency()
     {
-        return $this->belongsto('App\Models\Invoice');
+        return $this->belongsto('App\Models\Agency');
     }
     public function invoice()
     {

@@ -26,7 +26,7 @@ class DetailInvoiceImport implements ToModel
                     ['name',$row[2]],
                     ['lastName',$row[1]]
                     ])->first();
-            $out->writeln("client ".is_null($client));        
+            //$out->writeln("client ".is_null($client));        
             if(is_null($client)){
                 $client=Client::create([
                     'name'=>$row[2],
@@ -69,6 +69,7 @@ class DetailInvoiceImport implements ToModel
             $invoice->save();
             
             DB::commit();
+            
             return new DetailInvoice([
                     'client_id'=>$client->id,
                     'agency_id'=>$agency->id,
