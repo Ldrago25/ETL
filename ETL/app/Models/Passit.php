@@ -14,4 +14,8 @@ class Passit extends Model
         'unitCost',
         'iva'
     ];
+    public function detailinvoice()
+    {
+        return $this->hasMany('App\Models\DetailInvoice');
+    }
 }

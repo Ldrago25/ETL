@@ -12,4 +12,8 @@ class Client extends Model
         'name',
         'lastName'
     ];
+    public function detailinvoice()
+    {
+        return $this->hasMany('App\Models\DetailInvoice');
+    }
 }

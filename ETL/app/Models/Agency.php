@@ -11,4 +11,10 @@ class Agency extends Model
     protected $fillable = [
         'name',
     ];
+    
+    public function detailinvoice()
+    {
+        return $this->hasMany('App\Models\DetailInvoice');
+    }
+    
 }

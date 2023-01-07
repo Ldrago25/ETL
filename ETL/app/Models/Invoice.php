@@ -13,4 +13,9 @@ class Invoice extends Model
         'amountPassits',
         'haveSouce',
     ];
+        
+    public function detailinvoice()
+    {
+        return $this->hasMany('App\Models\DetailInvoice');
+    }
 }

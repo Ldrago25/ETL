@@ -16,4 +16,20 @@ class DetailInvoice extends Model
         'passit_id',
         'priceTotal'
     ];
+    public function agency()
+    {
+        return $this->belongsto('App\Models\Invoice');
+    }
+    public function invoice()
+    {
+        return $this->belongsto('App\Models\Invoice');
+    }
+    public function client()
+    {
+        return $this->belongsto('App\Models\Client');
+    }
+    public function passit()
+    {
+        return $this->belongsto('App\Models\Passit');
+    }
 }
